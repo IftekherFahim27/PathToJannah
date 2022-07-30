@@ -39,7 +39,8 @@ namespace PathToJannah.Controllers
             }
             ModelState.Clear();
             ViewBag.SuccessMessage = "Registration is Successful";
-            return View("AddorEdit", new User());
+            return RedirectToAction("Index", "Login");
+           // return View("AddorEdit", new User());
         }
     }
 }

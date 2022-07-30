@@ -15,14 +15,14 @@ namespace PathToJannah.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "This Page is Under Construction";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "This Page is Under Construction";
 
             return View();
         }

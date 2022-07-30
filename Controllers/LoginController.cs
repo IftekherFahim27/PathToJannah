@@ -20,21 +20,34 @@ namespace PathToJannah.Controllers
         {
             using (PTJEntities db = new PTJEntities())
             {
-                var userDetails = db.Users.Where(x => x.Email == usermodel.Email && x.Pass == usermodel.Pass).FirstOrDefault();
-                if (userDetails == null)
-                {
-                    usermodel.LoginErrorMessage = "Wrong UserName or Password";
-                    return View("Index", usermodel);
 
+                if (usermodel.Email.Equals("admin@gmail.com") && usermodel.Pass.Equals("admin"))
+                {
+                    Session["Email"] = usermodel.Email;
+                    return RedirectToAction("Index", "DBConnection");
                 }
                 else
                 {
-                    Session["U_ID"] = userDetails.U_ID;
-                    Session["Username"] = userDetails.Name;
-                    Session["Email"] = userDetails.Email;
-                    Session["Mobile"] = userDetails.Mobile;
-                    return RedirectToAction("Index", "UserHome");
+                    var userDetails = db.Users.Where(x => x.Email == usermodel.Email && x.Pass == usermodel.Pass).FirstOrDefault();
+                    if (userDetails == null)
+                    {
+                        usermodel.LoginErrorMessage = "Wrong UserName or Password";
+                        return View("Index", usermodel);
+
+                    }
+
+                    else
+                    {
+                        Session["U_ID"] = userDetails.U_ID;
+                        Session["Username"] = userDetails.Name;
+                        Session["Email"] = userDetails.Email;
+                        Session["Mobile"] = userDetails.Mobile;
+                        return RedirectToAction("Index", "UserHome");
+                    }
+
                 }
+
+               
             }
 
         }  

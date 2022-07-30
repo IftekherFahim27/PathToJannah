@@ -1,0 +1,42 @@
+﻿@model List<PathToJannah.Models.User>
+@{
+    ViewBag.Title = "Index";
+
+    if (Session["Email"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<h2>User Info</h2>
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>USername</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.U_ID</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Mobile</td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+<body>
+    <div>
+        <a href="@Url.Action("LogOut","Login")">LogOut</a>
+    </div>
+</body>
+
