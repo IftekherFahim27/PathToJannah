@@ -27,6 +27,7 @@ namespace PathToJannah.Models
         public int U_ID { get; set; }
 
         [Required(ErrorMessage = "Name is Required")]
+        [DisplayName("Username")]
         public string Name { get; set; }
 
         [DataType(DataType.PhoneNumber)]
@@ -48,7 +49,9 @@ namespace PathToJannah.Models
         [DisplayName("Confirm Password")]
         [Compare("Pass")]
         public string ConfirmPass { get; set; }
-        
+
+        public string LoginErrorMessage { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Blog> Blogs { get; set; }
