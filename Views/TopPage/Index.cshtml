@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Path to Jannah </title>
+</head>
+<body>
+    <div>
+        <h1>Welcome  Path to Jannah</h1>
+
+        @using (Html.BeginForm("Index", "TopPage", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Index", "Login")">Login</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        
+                        <a href="@Url.Action("AddorEdit", "User")">Register</a>
+                    </td>
+
+                </tr>
+
+            </table>
+            }
+
+        </div>
+</body>
+</html>
