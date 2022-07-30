@@ -31,7 +31,7 @@ namespace PathToJannah.Controllers
                     var userDetails = db.Users.Where(x => x.Email == usermodel.Email && x.Pass == usermodel.Pass).FirstOrDefault();
                     if (userDetails == null)
                     {
-                        usermodel.LoginErrorMessage = "Wrong UserName or Password";
+                        usermodel.LoginErrorMessage = "Wrong Email or Password";
                         return View("Index", usermodel);
 
                     }
