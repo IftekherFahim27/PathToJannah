@@ -18,24 +18,36 @@ namespace PathToJannah.Controllers
         [HttpPost]
         public ActionResult Authorize(PathToJannah.Models.User usermodel)
         {
-            using (PTJEntities db=new PTJEntities())
+            using (PTJEntities db = new PTJEntities())
             {
-                var userDetails=db.Users.Where(x=>x.Email==usermodel.Email && x.Pass==usermodel.Pass).FirstOrDefault();
+                var userDetails = db.Users.Where(x => x.Email == usermodel.Email && x.Pass == usermodel.Pass).FirstOrDefault();
                 if (userDetails == null)
                 {
                     usermodel.LoginErrorMessage = "Wrong UserName or Password";
-                    return View("Index",usermodel);
+                    return View("Index", usermodel);
 
                 }
                 else
                 {
-                    Session["U_ID"]=userDetails.U_ID;
+                    Session["U_ID"] = userDetails.U_ID;
+                    Session["Username"] = userDetails.Name;
+                    Session["Email"] = userDetails.Email;
+                    Session["Mobile"] = userDetails.Mobile;
                     return RedirectToAction("Index", "UserHome");
                 }
             }
-            
-            
-            return View();
+
+        }  
+        
+        
+
+        public ActionResult LogOut()
+        {
+            string name =(string) Session["Username"];
+            string mail =(string) Session["Email"];
+            string mob =(string) Session["Mobile"];
+            Session.Abandon();
+            return RedirectToAction("Index","Login");
         }
 
     }
