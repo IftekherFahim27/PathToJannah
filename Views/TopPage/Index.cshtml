@@ -9,32 +9,39 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Path to Jannah </title>
+    <style>
+        body {
+            background-color: #80ff80;
+        }
+    </style>
 </head>
 <body>
+    
     <div>
-        <h1>Welcome  Path to Jannah</h1>
+        <h1 align="center">Welcome  Path to Jannah</h1>
 
         @using (Html.BeginForm("Index", "TopPage", FormMethod.Post))
         {
-            <table>
+            <table align="center" >
                 <tr>
                     <td>
                         <a href="@Url.Action("Index", "Login")">Login</a>
                     </td>
 
                 </tr>
-
+                <tr></tr>
+                <tr></tr>
                 <tr>
                     <td>
-                        
+
                         <a href="@Url.Action("AddorEdit", "User")">Register</a>
                     </td>
 
                 </tr>
 
             </table>
-            }
+        }
 
-        </div>
+    </div>
 </body>
 </html>
