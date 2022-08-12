@@ -23,8 +23,8 @@ namespace PathToJannah
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/hello.css"));
+                      "~/Content/StyleSheet2.css",
+                      "~/Content/bootstrap.css"));
         }
     }
 }

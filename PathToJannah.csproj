@@ -172,6 +172,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\hello.css" />
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\StyleSheet2.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\demo-files\demo.css" />
@@ -182,6 +184,11 @@
     <Content Include="fonts\icomoon\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\back1.jpg" />
+    <Content Include="images\back2.jpg" />
+    <Content Include="images\back3.jpg" />
+    <Content Include="images\back4.jpg" />
+    <Content Include="images\back5.jpg" />
     <Content Include="images\Islam.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -220,6 +227,8 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\owl.carousel.min.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Views\Login\back5.jpg" />
+    <Content Include="Views\TopPage\Islam.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,10 @@
+﻿
+body {
+    height: 100%;
+    margin: 100px;
+    background-image: url('../images/back3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
