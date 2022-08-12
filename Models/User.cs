@@ -46,7 +46,7 @@ namespace PathToJannah.Models
        
 
         [DataType(DataType.Password)]
-        [DisplayName("Confirm Password")]
+        [DisplayName("Confirm_Password")]
         [Compare("Pass")]
         public string ConfirmPass { get; set; }
 
