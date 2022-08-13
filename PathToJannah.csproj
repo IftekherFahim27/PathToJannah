@@ -132,6 +132,7 @@
     <Compile Include="Controllers\DBConnectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NamesofAllahController.cs" />
     <Compile Include="Controllers\TopPageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserHomeController.cs" />
@@ -276,6 +277,7 @@
     <Content Include="Views\DBConnection\Index.cshtml" />
     <Content Include="Views\TopPage\Index.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
+    <Content Include="Views\NamesofAllah\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

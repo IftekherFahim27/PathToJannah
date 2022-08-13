@@ -59,7 +59,6 @@
           <Property Name="Name" Type="varchar" MaxLength="255" />
           <Property Name="Dua_txt" Type="text" />
           <Property Name="Dua_meaning" Type="text" />
-          <Property Name="U_ID" Type="int" />
         </EntityType>
         <EntityType Name="Hadith">
           <Key>
@@ -70,7 +69,6 @@
           <Property Name="Bookname" Type="varchar" MaxLength="255" />
           <Property Name="hadith_no" Type="int" />
           <Property Name="hadith_text" Type="text" />
-          <Property Name="U_ID" Type="int" />
           <Property Name="Hadith_meaning" Type="text" />
         </EntityType>
         <EntityType Name="Surah">
@@ -82,7 +80,6 @@
           <Property Name="Ayat" Type="int" />
           <Property Name="Origin" Type="varchar" MaxLength="255" />
           <Property Name="Surah_txt" Type="text" />
-          <Property Name="U_ID" Type="int" />
           <Property Name="Surah_meaning" Type="text" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -153,54 +150,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Dua__U_ID__3B75D760">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Dua" Type="Self.Dua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Dua">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Hadith__U_ID__36B12243">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Hadith" Type="Self.Hadith" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Hadith">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Surah__U_ID__2F10007B">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Surah" Type="Self.Surah" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Surah">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="Allah_name" Type="Self.Allah_name" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Allah_name">
-              <PropertyRef Name="A_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="PTJModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Allah_name" EntityType="Self.Allah_name" Schema="dbo" store:Type="Tables" />
@@ -227,22 +176,6 @@
           <AssociationSet Name="FK__Donation__U_ID__0AD2A005" Association="Self.FK__Donation__U_ID__0AD2A005">
             <End Role="Users" EntitySet="Users" />
             <End Role="Donation" EntitySet="Donation" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Dua__U_ID__3B75D760" Association="Self.FK__Dua__U_ID__3B75D760">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Dua" EntitySet="Dua" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Hadith__U_ID__36B12243" Association="Self.FK__Hadith__U_ID__36B12243">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Hadith" EntitySet="Hadith" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Surah__U_ID__2F10007B" Association="Self.FK__Surah__U_ID__2F10007B">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Surah" EntitySet="Surah" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users" Association="Self.FK_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Allah_name" EntitySet="Allah_name" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -295,10 +228,6 @@
           <NavigationProperty Name="Blogs" Relationship="Self.FK__Blog__U_ID__0F975522" FromRole="Users" ToRole="Blog" />
           <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__U_ID__145C0A3F" FromRole="Users" ToRole="Comments" />
           <NavigationProperty Name="Donations" Relationship="Self.FK__Donation__U_ID__0AD2A005" FromRole="Users" ToRole="Donation" />
-          <NavigationProperty Name="Allah_name" Relationship="PTJModel.FK_Users" FromRole="User" ToRole="Allah_name" />
-          <NavigationProperty Name="Duas" Relationship="PTJModel.FK__Dua__U_ID__3B75D760" FromRole="User" ToRole="Dua" />
-          <NavigationProperty Name="Hadiths" Relationship="PTJModel.FK__Hadith__U_ID__36B12243" FromRole="User" ToRole="Hadith" />
-          <NavigationProperty Name="Surahs" Relationship="PTJModel.FK__Surah__U_ID__2F10007B" FromRole="User" ToRole="Surah" />
         </EntityType>
         <Association Name="FK__Blog__U_ID__0F975522">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
@@ -375,22 +304,6 @@
           <EntitySet Name="Hadiths" EntityType="PTJModel.Hadith" />
           <EntitySet Name="Surahs" EntityType="PTJModel.Surah" />
           <EntitySet Name="sysdiagrams" EntityType="PTJModel.sysdiagram" />
-          <AssociationSet Name="FK_Users" Association="PTJModel.FK_Users">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Allah_name" EntitySet="Allah_name" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Dua__U_ID__3B75D760" Association="PTJModel.FK__Dua__U_ID__3B75D760">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Dua" EntitySet="Duas" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Hadith__U_ID__36B12243" Association="PTJModel.FK__Hadith__U_ID__36B12243">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Hadith" EntitySet="Hadiths" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Surah__U_ID__2F10007B" Association="PTJModel.FK__Surah__U_ID__2F10007B">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Surah" EntitySet="Surahs" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Admin">
           <Key>
@@ -408,7 +321,6 @@
           <Property Name="A_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Meaning" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="PTJModel.FK_Users" FromRole="Allah_name" ToRole="User" />
         </EntityType>
         <EntityType Name="Dua">
           <Key>
@@ -416,10 +328,8 @@
           </Key>
           <Property Name="DU_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Dua_txt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Dua_txt" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
           <Property Name="Dua_meaning" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="U_ID" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="PTJModel.FK__Dua__U_ID__3B75D760" FromRole="Dua" ToRole="User" />
         </EntityType>
         <EntityType Name="Hadith">
           <Key>
@@ -430,9 +340,7 @@
           <Property Name="Bookname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="hadith_no" Type="Int32" />
           <Property Name="hadith_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="U_ID" Type="Int32" />
           <Property Name="Hadith_meaning" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="PTJModel.FK__Hadith__U_ID__36B12243" FromRole="Hadith" ToRole="User" />
         </EntityType>
         <EntityType Name="Surah">
           <Key>
@@ -443,9 +351,7 @@
           <Property Name="Ayat" Type="Int32" />
           <Property Name="Origin" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Surah_txt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="U_ID" Type="Int32" />
           <Property Name="Surah_meaning" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="PTJModel.FK__Surah__U_ID__2F10007B" FromRole="Surah" ToRole="User" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -457,54 +363,6 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK_Users">
-          <End Type="PTJModel.User" Role="User" Multiplicity="1" />
-          <End Type="PTJModel.Allah_name" Role="Allah_name" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Allah_name">
-              <PropertyRef Name="A_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Dua__U_ID__3B75D760">
-          <End Type="PTJModel.User" Role="User" Multiplicity="0..1" />
-          <End Type="PTJModel.Dua" Role="Dua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Dua">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Hadith__U_ID__36B12243">
-          <End Type="PTJModel.User" Role="User" Multiplicity="0..1" />
-          <End Type="PTJModel.Hadith" Role="Hadith" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Hadith">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Surah__U_ID__2F10007B">
-          <End Type="PTJModel.User" Role="User" Multiplicity="0..1" />
-          <End Type="PTJModel.Surah" Role="Surah" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="U_ID" />
-            </Principal>
-            <Dependent Role="Surah">
-              <PropertyRef Name="U_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -576,7 +434,6 @@
           <EntitySetMapping Name="Duas">
             <EntityTypeMapping TypeName="PTJModel.Dua">
               <MappingFragment StoreEntitySet="Dua">
-                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
                 <ScalarProperty Name="Dua_meaning" ColumnName="Dua_meaning" />
                 <ScalarProperty Name="Dua_txt" ColumnName="Dua_txt" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -588,7 +445,6 @@
             <EntityTypeMapping TypeName="PTJModel.Hadith">
               <MappingFragment StoreEntitySet="Hadith">
                 <ScalarProperty Name="Hadith_meaning" ColumnName="Hadith_meaning" />
-                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
                 <ScalarProperty Name="hadith_text" ColumnName="hadith_text" />
                 <ScalarProperty Name="hadith_no" ColumnName="hadith_no" />
                 <ScalarProperty Name="Bookname" ColumnName="Bookname" />
@@ -601,7 +457,6 @@
             <EntityTypeMapping TypeName="PTJModel.Surah">
               <MappingFragment StoreEntitySet="Surah">
                 <ScalarProperty Name="Surah_meaning" ColumnName="Surah_meaning" />
-                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
                 <ScalarProperty Name="Surah_txt" ColumnName="Surah_txt" />
                 <ScalarProperty Name="Origin" ColumnName="Origin" />
                 <ScalarProperty Name="Ayat" ColumnName="Ayat" />

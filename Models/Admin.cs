@@ -18,7 +18,7 @@ namespace PathToJannah.Models
         public int AID { get; set; }
         public string Name { get; set; }
 
-        
+
         [DataType(DataType.EmailAddress)]
         [System.ComponentModel.DisplayName("Email")]
         [Required(ErrorMessage = "Email is Required")]
@@ -29,7 +29,7 @@ namespace PathToJannah.Models
         [Required(ErrorMessage = "Password is Required")]
         public string pass { get; set; }
 
-    
+
         public string LoginErrorMessage { get; set; }
     }
 }

@@ -17,7 +17,5 @@ namespace PathToJannah.Models
         public int A_ID { get; set; }
         public string Name { get; set; }
         public string Meaning { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }

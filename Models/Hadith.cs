@@ -19,9 +19,6 @@ namespace PathToJannah.Models
         public string Bookname { get; set; }
         public Nullable<int> hadith_no { get; set; }
         public string hadith_text { get; set; }
-        public Nullable<int> U_ID { get; set; }
         public string Hadith_meaning { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }
