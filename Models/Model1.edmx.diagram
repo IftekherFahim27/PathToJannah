@@ -13,6 +13,16 @@
         <AssociationConnector Association="PTJModel.FK__Comments__P_ID__15502E78" ManuallyRouted="false" />
         <AssociationConnector Association="PTJModel.FK__Comments__U_ID__145C0A3F" ManuallyRouted="false" />
         <AssociationConnector Association="PTJModel.FK__Donation__U_ID__0AD2A005" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PTJModel.Admin" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="PTJModel.Allah_name" Width="1.5" PointX="3" PointY="10" />
+        <EntityTypeShape EntityType="PTJModel.Dua" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="PTJModel.Hadith" Width="1.5" PointX="3" PointY="12.5" />
+        <EntityTypeShape EntityType="PTJModel.Surah" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="PTJModel.sysdiagram" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="PTJModel.FK_Users" />
+        <AssociationConnector Association="PTJModel.FK__Dua__U_ID__3B75D760" />
+        <AssociationConnector Association="PTJModel.FK__Hadith__U_ID__36B12243" />
+        <AssociationConnector Association="PTJModel.FK__Surah__U_ID__2F10007B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

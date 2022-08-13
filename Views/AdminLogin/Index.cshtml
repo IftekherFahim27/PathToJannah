@@ -1,4 +1,4 @@
-﻿@model PathToJannah.Models.User
+﻿@model PathToJannah.Models.Admin
 
 
 <!DOCTYPE html>
@@ -24,6 +24,7 @@
         .field-validation-error {
             color: red;
         }
+
         .active {
             background-color: rgb(238, 238, 238);
             color: brown;
@@ -60,72 +61,72 @@
 
     </nav>
     <div class="col-xs-4">
-    <div class="form-horizontal">
-        <h3 align="center" style="margin-top: 150px;padding-left:30px ;font-size: 40px; color: greenyellow">SIGN IN</h3>
-        @using (Html.BeginForm("Authorize", "Login", FormMethod.Post))
-        {
+        <div class="form-horizontal">
+            <h3 align="center" style="margin-top: 150px;padding-left:30px ;font-size: 40px; color: greenyellow"> Admin SIGN IN</h3>
+            @using (Html.BeginForm("Admin_Authorize", "AdminLogin", FormMethod.Post))
+            {
 
-            <table align="center" style="padding: 10px">
-                <tbody>
-                    <tr>
-                        
-                        <td style="padding-right:10px">
-                            @Html.LabelFor(model => model.Email)
-                        </td>
-                        
-                        
-                        <td>
-                            @Html.EditorFor(model => model.Email)
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>@Html.ValidationMessageFor(model => model.Email)</td>
+                <table align="center" style="padding: 10px">
+                    <tbody>
+                        <tr>
 
-                    </tr>
-                    
-                    <tr><td><br /></td></tr>
-                    <tr>
-
-                        <td style="padding-right:10px">
-                            @Html.LabelFor(model => model.Pass)
-                        </td>
-                        <td>
-                            @Html.EditorFor(model => model.Pass)
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>@Html.ValidationMessageFor(model => model.Pass)</td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
-
-                        </td>
-                    </tr>
-                   
-
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type="submit" name="name" value="Login" class="btn btn-success" />
-                            <input type="reset" name="name" value="Clear" class="btn btn-danger" />
-                        </td>
-                    </tr>
-                </tbody>
-               
+                            <td style="padding-right:10px">
+                                @Html.LabelFor(ad => ad.email)
+                            </td>
 
 
-            </table>
+                            <td>
+                                @Html.EditorFor(ad => ad.email)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>@Html.ValidationMessageFor(ad => ad.email)</td>
+
+                        </tr>
+
+                        <tr><td><br /></td></tr>
+                        <tr>
+
+                            <td style="padding-right:10px">
+                                @Html.LabelFor(ad => ad.pass)
+                            </td>
+                            <td>
+                                @Html.EditorFor(ad => ad.pass)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>@Html.ValidationMessageFor(ad => ad.pass)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <label class="field-validation-error">@Html.DisplayFor(ad => ad.LoginErrorMessage)</label>
+
+                            </td>
+                        </tr>
 
 
-        }
-        <h5 align="center"><a href="@Url.Action("AddorEdit", "User")">Don't Have an Account? Register Here</a></h5>
-    </div>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="name" value="Login" class="btn btn-success" />
+                                <input type="reset" name="name" value="Clear" class="btn btn-danger" />
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+
+                </table>
+
+
+            }
+            
+        </div>
     </div>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>

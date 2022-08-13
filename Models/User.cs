@@ -22,8 +22,11 @@ namespace PathToJannah.Models
             this.Blogs = new HashSet<Blog>();
             this.Comments = new HashSet<Comment>();
             this.Donations = new HashSet<Donation>();
+            this.Duas = new HashSet<Dua>();
+            this.Hadiths = new HashSet<Hadith>();
+            this.Surahs = new HashSet<Surah>();
         }
-    
+
         public int U_ID { get; set; }
 
         [Required(ErrorMessage = "Name is Required")]
@@ -32,26 +35,27 @@ namespace PathToJannah.Models
 
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Mobile Number is Required")]
-       
+
         public string Mobile { get; set; }
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Email is Required")]
         public string Email { get; set; }
-        
+
 
         [DataType(DataType.Password)]
         [DisplayName("Password")]
         [Required(ErrorMessage = "Password is Required")]
         public string Pass { get; set; }
-       
+
 
         [DataType(DataType.Password)]
         [DisplayName("Confirm_Password")]
         [Compare("Pass")]
         public string ConfirmPass { get; set; }
 
-        public string LoginErrorMessage { get; set; }
+       
 
+        public string LoginErrorMessage { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Blog> Blogs { get; set; }
@@ -59,5 +63,12 @@ namespace PathToJannah.Models
         public virtual ICollection<Comment> Comments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Donation> Donations { get; set; }
+        public virtual Allah_name Allah_name { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dua> Duas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hadith> Hadiths { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Surah> Surahs { get; set; }
     }
 }
