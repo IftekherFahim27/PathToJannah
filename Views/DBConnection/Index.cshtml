@@ -1,10 +1,11 @@
 ﻿@model List<PathToJannah.Models.User>
+
 @{
     ViewBag.Title = "Index";
 
     if (Session["Email"] == null)
     {
-        Response.Redirect("~/Login/Index");
+        Response.Redirect("~/AdminLogin/Index");
     }
 }
 
@@ -40,3 +41,11 @@
     </div>
 </body>
 
+
+<script>
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+
+    
