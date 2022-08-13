@@ -19,9 +19,6 @@ namespace PathToJannah.Models
         public Nullable<int> Ayat { get; set; }
         public string Origin { get; set; }
         public string Surah_txt { get; set; }
-        public Nullable<int> U_ID { get; set; }
         public string Surah_meaning { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }

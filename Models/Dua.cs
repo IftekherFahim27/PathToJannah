@@ -18,8 +18,5 @@ namespace PathToJannah.Models
         public string Name { get; set; }
         public string Dua_txt { get; set; }
         public string Dua_meaning { get; set; }
-        public Nullable<int> U_ID { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }
