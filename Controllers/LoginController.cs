@@ -21,13 +21,7 @@ namespace PathToJannah.Controllers
             using (PTJEntities db = new PTJEntities())
             {
 
-                if (usermodel.Email.Equals("admin@gmail.com") && usermodel.Pass.Equals("admin"))
-                {
-                    Session["Email"] = usermodel.Email;
-                    return RedirectToAction("Index", "DBConnection");
-                }
-                else
-                {
+                
                     var userDetails = db.Users.Where(x => x.Email == usermodel.Email && x.Pass == usermodel.Pass).FirstOrDefault();
                     if (userDetails == null)
                     {
@@ -45,14 +39,16 @@ namespace PathToJannah.Controllers
                         return RedirectToAction("Index", "UserHome");
                     }
 
-                }
+                
 
                
             }
 
-        }  
+        }
         
-        
+
+
+
 
         public ActionResult LogOut()
         {
