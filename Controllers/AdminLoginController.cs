@@ -14,6 +14,7 @@ namespace PathToJannah.Controllers
         {
             return View();
         }
+        
 
         [HttpPost]
         public ActionResult Admin_Authorize(PathToJannah.Models.Admin ad)
@@ -25,14 +26,14 @@ namespace PathToJannah.Controllers
                 if (adminDetails == null)
                 {
                     ad.LoginErrorMessage = "Wrong Email or Password";
-                    return View("Index","AdminLogin");
+                    return View("Index",ad);
 
                 }
                 else
                 {
-                    
-                    
-                        Session["Email"] = ad.email;
+
+                        
+                        Session["Email"] = ad.email.ToString();
                         return RedirectToAction("Index", "DBConnection");
                     
                 }
@@ -44,10 +45,13 @@ namespace PathToJannah.Controllers
 
         public ActionResult LogOut()
         {
-            string name = (string)Session["Username"];
-            string mail = (string)Session["Email"];
-            string mob = (string)Session["Mobile"];
+            //string name = (string)Session["Username"];
+            //string mail = (string)Session["Email"];
+           // string mob = (string)Session["Mobile"];
             Session.Abandon();
+          
+            Session.Clear();
+            Session.RemoveAll();
             return RedirectToAction("Index", "AdminLogin");
         }
     }

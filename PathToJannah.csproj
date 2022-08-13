@@ -203,12 +203,17 @@
     <Content Include="fonts\icomoon\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Allah.png" />
     <Content Include="images\back1.jpg" />
     <Content Include="images\back2.jpg" />
     <Content Include="images\back3.jpg" />
     <Content Include="images\back4.jpg" />
     <Content Include="images\back5.jpg" />
+    <Content Include="images\Dua.png" />
+    <Content Include="images\hadith.jpg" />
     <Content Include="images\Islam.jpg" />
+    <Content Include="images\surah.jpg" />
+    <Content Include="images\surah.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
