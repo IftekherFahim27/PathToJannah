@@ -213,10 +213,13 @@
     <Content Include="images\back3.jpg" />
     <Content Include="images\back4.jpg" />
     <Content Include="images\back5.jpg" />
+    <Content Include="images\bismillah.jpg" />
     <Content Include="images\Dua.png" />
     <Content Include="images\fatiha.png" />
+    <Content Include="images\final.png" />
     <Content Include="images\hadith.jpg" />
     <Content Include="images\hadith.png" />
+    <Content Include="images\img2.png" />
     <Content Include="images\Islam.jpg" />
     <Content Include="images\surah.jpg" />
     <Content Include="images\surah.png" />
