@@ -10,43 +10,47 @@
 <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
 
 <style>
-    .active {
-        background-color: rgb(238, 238, 238);
-        color: brown;
-    }
+    
 
     .card {
         background-image: linear-gradient(rebeccapurple,pink);
         box-shadow: 6px 8px 6px black;
     }
 
-        .card:hover {
-            box-shadow: 6px 12px 6px pink;
-        }
+     .card:hover {
+        box-shadow: 6px 12px 6px pink;
+      }
+
+    .modal-content {
+        background-color:lemonchiffon;
+    }
+    .thumbnail {
+        background-color:khaki;
+    }
 </style>
 
-
-<table class="table">
+<h1 align="center" style="color: yellow">Frequently Used Surahs</h1>
+<table class="table"> 
 
     @foreach (var item in Model)
     {
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
             <div class="thumbnail">
-                <a href="" data-toggle="modal" data-target="#myModal1">
-                    <img src="~/images/fatiha.png">
-
-                    <!-- <a href="Pictures/gallery/g1.jpg"><img src="Pictures/gallery/g1.jpg"></a>-->
+                <a href="" data-toggle="modal" data-target="#@item.S_ID">
+                    <img src="~/images/final.png">
                 </a>
                 <h5 align="center">Surah Name : @Html.DisplayFor(modelItem => item.Name)</h5>
                 <h5 align="center">Surah Ayat : @Html.DisplayFor(modelItem => item.Ayat)</h5>
                 <h5 align="center">Surah Origin : @Html.DisplayFor(modelItem => item.Origin)</h5>
                
 
-                <!-- Modal -->
-                <div id="myModal1" class="modal fade" role="dialog">
+              
+                <div id="@item.S_ID" class="modal fade" role="dialog">
                     <div class="modal-dialog">
 
-                        <!-- Modal content-->
+
+                  
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title text-center">Surah : @Html.DisplayFor(modelItem => item.Name)</h4>
@@ -72,6 +76,7 @@
                 </div>
             </div>
         </div>
+       
                 }
 
     </table>
