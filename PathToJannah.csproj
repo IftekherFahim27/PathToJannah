@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NamesofAllahController.cs" />
+    <Compile Include="Controllers\SurahController.cs" />
     <Compile Include="Controllers\TopPageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserHomeController.cs" />
@@ -213,6 +214,7 @@
     <Content Include="images\back4.jpg" />
     <Content Include="images\back5.jpg" />
     <Content Include="images\Dua.png" />
+    <Content Include="images\fatiha.png" />
     <Content Include="images\hadith.jpg" />
     <Content Include="images\hadith.png" />
     <Content Include="images\Islam.jpg" />
@@ -278,6 +280,7 @@
     <Content Include="Views\TopPage\Index.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
     <Content Include="Views\NamesofAllah\Index.cshtml" />
+    <Content Include="Views\Surah\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
