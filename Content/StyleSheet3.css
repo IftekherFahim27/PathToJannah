@@ -1,0 +1,64 @@
+﻿body {
+    height: 100%;
+    background-image: url('../images/back2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: transparent !important;
+}
+
+.jumbotron {
+    position: relative;
+    top: 0px;
+    padding-top: 5px;
+    height: 100px;
+    background-color: transparent !important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+    .sidenav a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffe7e7;
+        display: block;
+        width: 200px;
+    }
+
+        .sidenav a:hover {
+            color: #000000;
+            background-color: #818181;
+        }
+
+    .sidenav i {
+        margin-right: 10px;
+    }
+
+.main {
+    margin-left: 200px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}

@@ -29,8 +29,9 @@
         background-color: khaki;
     }
 </style>
-
-<h1 align="center" style="color: yellow">Important Hadith's</h1>
+<body>
+<h1 align="center" style="color: crimson; margin-top: 12px"> <a href="@Url.Action("Index", "TopPage")"> PATH TO JANNAH </a></h1>
+<h2 align="center" style="color: yellow">Important Hadith's</h2>
 <table class="table">
     @foreach (var item in Model)
     {
@@ -39,7 +40,7 @@
             <div class="thumbnail">
 
                 <a href="" data-toggle="modal" data-target="#@item.H_ID">
-                    <img src="~/images/final.png">
+                    <img src="~/images/hadith-thumbnail.png">
 
                     <!-- <a href="Pictures/gallery/g1.jpg"><img src="Pictures/gallery/g1.jpg"></a>-->
                 </a>
@@ -82,6 +83,6 @@
     }
 
 </table>
-
+</body>
 
 

@@ -22,37 +22,39 @@
     </style>
 </head>
 <body>
-    <h1 align="center">99 Names of Allah </h1>
-    <table class="table table-danger table-hover " >
+    <h1 align="center" style="color: crimson; margin-top: 12px"> <a href="@Url.Action("Index", "TopPage")"> PATH TO JANNAH </a></h1>
+    <h2 align="center">99 Names of Allah </h2>
+    <table class="table table-danger table-hover ">
         <tr align="center">
             <td>
                 <h3>Serial No.</h3>
             </td>
             <td>
                 <h3>@Html.DisplayNameFor(model => model.Name)</h3>
-                
+
             </td>
             <td>
                 <h3>@Html.DisplayNameFor(model => model.Meaning)</h3>
             </td>
-            
+
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr align="center">
-            <td>
-                @Html.DisplayFor(modelItem => item.A_ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Meaning)
-            </td>
-            
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr align="center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.A_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Meaning)
+                </td>
+
+            </tr>
+        }
+
     </table>
 </body>
 </html>
