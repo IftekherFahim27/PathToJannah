@@ -17,20 +17,20 @@
         box-shadow: 6px 8px 6px black;
     }
 
-        .card:hover {
-            box-shadow: 6px 12px 6px pink;
+        .thumbnail:hover {
+            box-shadow: 6px 12px 6px lightblue;
         }
 
     .modal-content {
-        background-color: lemonchiffon;
+        background-color: lightblue;
     }
 
     .thumbnail {
-        background-color: khaki;
+        background-color: powderblue;
     }
 </style>
-
-<h1 align="center" style="color: yellow">Important Dua's</h1>
+<h1 align="center" style="color: crimson; margin-top: 12px"> <a href="@Url.Action("Index", "TopPage")"> PATH TO JANNAH </a></h1>
+<h2 align="center" style="color: crimson">Important Dua's</h2>
 <table class="table">
     @foreach (var item in Model)
     {
@@ -39,11 +39,11 @@
             <div class="thumbnail">
 
                 <a href="" data-toggle="modal" data-target="#@item.DU_ID">
-                    <img src="~/images/final.png">
+                    <img src="~/images/dua-thumbnail.png">
 
                     <!-- <a href="Pictures/gallery/g1.jpg"><img src="Pictures/gallery/g1.jpg"></a>-->
                 </a>
-                <h5 align="center">Dua Name : @Html.DisplayFor(modelItem => item.Name)</h5>
+                <h5 align="center"><b>@Html.DisplayFor(modelItem => item.Name)</b></h5>
 
 
 

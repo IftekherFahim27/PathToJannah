@@ -198,6 +198,7 @@
     <Content Include="Content\hello.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StyleSheet2.css" />
+    <Content Include="Content\StyleSheet3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\demo-files\demo.css" />
@@ -220,10 +221,13 @@
     <Content Include="images\Dua.png" />
     <Content Include="images\fatiha.png" />
     <Content Include="images\final.png" />
+    <Content Include="images\hadith-thumbnail.png" />
     <Content Include="images\hadith.jpg" />
     <Content Include="images\hadith.png" />
     <Content Include="images\img2.png" />
     <Content Include="images\Islam.jpg" />
+    <Content Include="images\kalma-removebg-preview.png" />
+    <Content Include="images\dua-thumbnail.png" />
     <Content Include="images\surah-removebg-preview.png" />
     <Content Include="images\surah.jpg" />
     <Content Include="images\surah.png" />

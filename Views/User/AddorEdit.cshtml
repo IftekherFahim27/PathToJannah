@@ -31,18 +31,15 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <h3 style="color: crimson; margin-top: 12px">PATH TO JANNAH</h3>
+                    <h3 style="color: crimson; margin-top: 12px"> <a href="@Url.Action("Index", "TopPage")"> PATH TO JANNAH </a></h3>
 
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("Index", "AdminLogin")">Admin</a></li>
-                    <li><a href="@Url.Action("Index", "Login")">Login</a></li>
-                    <li class="active"><a href="@Url.Action("AddorEdit", "User")">Register</a></li>
-                    <li>@Html.ActionLink("Blog", "About", "Home")</li>
-                    <li>@Html.ActionLink("Donation", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("About us", "", "")</li>
-
+                    <li><a href="@Url.Action("Index", "Login")"><i class="fa fa-user"></i> Login</a></li>
+                    <li class="active"><a href="@Url.Action("AddorEdit", "User")"><i class="fa fa-user-plus"></i> Register</a></li>
+                    <li><a href="#"><i class="fa fa-users"></i> About Us</a></li>
+                    <li><a href="@Url.Action("Index", "AdminLogin")"><i class="fa fa-lock"></i> Admin</a></li>
                 </ul>
             </div>
         </div>
