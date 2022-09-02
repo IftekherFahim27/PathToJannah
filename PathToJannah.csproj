@@ -131,7 +131,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DBConnectionController.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DuaController.cs" />
     <Compile Include="Controllers\HadithController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -300,6 +302,7 @@
     <Content Include="Views\Dua\Index.cshtml" />
     <Content Include="Views\Hadith\Index.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
