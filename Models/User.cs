@@ -24,8 +24,10 @@ namespace PathToJannah.Models
 
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Mobile Number is Required")]
+        [RegularExpression(@"^([0][1][3-9][0-9]{8})$", ErrorMessage = "Invalid Mobile Number.")]
 
         public string Mobile { get; set; }
+
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Email is Required")]
         public string Email { get; set; }
@@ -34,6 +36,7 @@ namespace PathToJannah.Models
         [DataType(DataType.Password)]
         [DisplayName("Password")]
         [Required(ErrorMessage = "Password is Required")]
+        [RegularExpression(@"^([a-zA-Z0-9]{8,15})$", ErrorMessage = "Invalid Password Format")]
         public string Pass { get; set; }
 
 
