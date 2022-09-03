@@ -155,7 +155,7 @@
     <Compile Include="Models\Blog.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs">
+    <Compile Include="Models\Comments.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Donation.cs">
@@ -303,6 +303,9 @@
     <Content Include="Views\Hadith\Index.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+
+    <Content Include="Views\Donation\Index.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

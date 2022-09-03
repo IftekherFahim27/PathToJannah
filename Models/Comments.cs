@@ -12,15 +12,12 @@ namespace PathToJannah.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class Comments
     {
         public int C_ID { get; set; }
-        public string Comment1 { get; set; }
-        public Nullable<System.DateTime> C_Date { get; set; }
-        public Nullable<int> U_ID { get; set; }
-        public Nullable<int> P_ID { get; set; }
-    
-        public virtual Blog Blog { get; set; }
-        public virtual User User { get; set; }
+        public string Comment { get; set; }
+        public System.DateTime C_Date { get; set; }
+        public int U_ID { get; set; }
+        public int P_ID { get; set; }
     }
 }

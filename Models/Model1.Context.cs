@@ -25,9 +25,6 @@ namespace PathToJannah.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Blog> Blogs { get; set; }
-        public virtual DbSet<Comment> Comments { get; set; }
-        public virtual DbSet<Donation> Donations { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Allah_name> Allah_name { get; set; }
@@ -35,5 +32,8 @@ namespace PathToJannah.Models
         public virtual DbSet<Hadith> Hadiths { get; set; }
         public virtual DbSet<Surah> Surahs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Blog> Blogs { get; set; }
+        public virtual DbSet<Comments> Comments1 { get; set; }
+        public virtual DbSet<Donation> Donations { get; set; }
     }
 }

@@ -14,19 +14,9 @@ namespace PathToJannah.Models
     
     public partial class Blog
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Blog()
-        {
-            this.Comments = new HashSet<Comment>();
-        }
-    
         public int P_ID { get; set; }
         public string Post { get; set; }
-        public Nullable<System.DateTime> P_Date { get; set; }
-        public Nullable<int> U_ID { get; set; }
-    
-        public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public System.DateTime P_Date { get; set; }
+        public int U_ID { get; set; }
     }
 }
