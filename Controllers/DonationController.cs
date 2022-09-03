@@ -10,6 +10,7 @@ namespace PathToJannah.Controllers
     public class DonationController : Controller
     {
         // GET: Donation
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -45,5 +46,6 @@ namespace PathToJannah.Controllers
             
             return View("Index", new Donation());
         }
+
     }
 }
