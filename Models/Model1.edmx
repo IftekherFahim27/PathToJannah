@@ -50,6 +50,7 @@
           <Property Name="T_ID" Type="varchar" MaxLength="255" />
           <Property Name="t_time" Type="varchar" MaxLength="255" />
           <Property Name="U_ID" Type="int" Nullable="false" />
+          <Property Name="state" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Dua">
           <Key>
@@ -226,6 +227,7 @@
           <Property Name="T_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="t_time" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="U_ID" Type="Int32" Nullable="false" />
+          <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -332,6 +334,7 @@
           <EntitySetMapping Name="Donations">
             <EntityTypeMapping TypeName="PTJModel.Donation">
               <MappingFragment StoreEntitySet="Donation">
+                <ScalarProperty Name="state" ColumnName="state" />
                 <ScalarProperty Name="U_ID" ColumnName="U_ID" />
                 <ScalarProperty Name="t_time" ColumnName="t_time" />
                 <ScalarProperty Name="T_ID" ColumnName="T_ID" />

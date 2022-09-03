@@ -11,10 +11,14 @@ namespace PathToJannah.Controllers
     {
         // GET: AdminBlog
         PTJEntities db = new PTJEntities();
+        
         public ActionResult Index()
         {
             List<Blog> blog = db.Blogs.ToList();
             return View(blog);
         }
+       
+      
+
     }
 }

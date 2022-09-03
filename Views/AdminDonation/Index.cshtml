@@ -61,8 +61,11 @@
                     @Html.DisplayFor(modelItem => item.U_ID)
                 </td>
                 <td>
-                    <input type="submit" value="Verified" class="btn btn-success" />
-                    <input type="submit" value="Not verified" class="btn btn-danger" />
+                    @using (Html.BeginForm("Index", "AdminDonation", FormMethod.Post))
+                    {
+                        <button name="UpdateDonation" type="submit" value="UpdateDonation" class="btn btn-success">Approve</button>
+                    }
+
                 </td>
             </tr>
         }
