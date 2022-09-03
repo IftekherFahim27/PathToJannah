@@ -14,6 +14,7 @@ namespace PathToJannah.Controllers
 
         public ActionResult Index()
         {
+            
             List<User> us = db.Users.ToList();
 
           //  var sql = "select * from Users";
