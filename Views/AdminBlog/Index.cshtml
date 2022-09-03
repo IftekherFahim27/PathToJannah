@@ -25,37 +25,39 @@
         </ul>
     </div>
     <div class="main">
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Post)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.P_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.U_ID)
-            </th>
-            <th></th>
-        </tr>
+        <table class="table table-light table-hover ">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Post)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.P_Date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.U_ID)
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Post)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.P_Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.U_ID)
+                        </td>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Post)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.P_Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.U_ID)
-                </td>
-                
-            </tr>
-        }
+                    </tr>
+                }
+                    </tbody>
 
-    </table>
-        </div>
+</table>
+    </div>
     </body>
 </html>

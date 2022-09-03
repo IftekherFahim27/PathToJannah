@@ -1,13 +1,5 @@
 ﻿@model List<PathToJannah.Models.User>
 
-@{
-    ViewBag.Title = "Index";
-
-    if (Session["Email"] == null)
-    {
-        Response.Redirect("~/AdminLogin/Index");
-    }
-}
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
