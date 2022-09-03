@@ -13,7 +13,6 @@ namespace PathToJannah.Models
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-
     public partial class Donation
     {
         public int D_ID { get; set; }
@@ -28,5 +27,8 @@ namespace PathToJannah.Models
         [DisplayName("Transaction Date")]
         public string t_time { get; set; }
         public int U_ID { get; set; }
+
+        [DisplayName("Transaction State")]
+        public string state { get; set; }
     }
 }

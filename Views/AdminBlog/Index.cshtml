@@ -24,6 +24,7 @@
             <li><a href="@Url.Action("Index","AdminLogin")"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
         </ul>
     </div>
+    <div class="main">
     <table class="table">
         <tr>
             <th>
@@ -50,14 +51,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.U_ID)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.P_ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.P_ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.P_ID })
-                </td>
+                
             </tr>
         }
 
     </table>
+        </div>
     </body>
 </html>

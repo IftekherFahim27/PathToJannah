@@ -20,7 +20,7 @@ namespace PathToJannah.Models
         [Required]
         public string Post { get; set; }
         [Required]
-        [DisplayName("Date") ]
+        [DisplayName("Date")]
         [DataType(DataType.Date)]
         public System.DateTime P_Date { get; set; }
         public int U_ID { get; set; }
