@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace PathToJannah.Controllers
 {
@@ -55,6 +56,10 @@ namespace PathToJannah.Controllers
             string name =(string) Session["Username"];
             string mail =(string) Session["Email"];
             string mob =(string) Session["Mobile"];
+            FormsAuthentication.SignOut();
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
             Session.Abandon();
             return RedirectToAction("Index","Login");
         }

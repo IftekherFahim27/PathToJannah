@@ -11,11 +11,17 @@ namespace PathToJannah.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Blog
     {
         public int P_ID { get; set; }
+        [Required]
         public string Post { get; set; }
+        [Required]
+        [DisplayName("Date") ]
+        [DataType(DataType.Date)]
         public System.DateTime P_Date { get; set; }
         public int U_ID { get; set; }
     }

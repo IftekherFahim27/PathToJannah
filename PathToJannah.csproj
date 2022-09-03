@@ -145,6 +145,7 @@
     <Compile Include="Controllers\TopPageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserHomeController.cs" />
+    <Compile Include="Controllers\USerPendingDonationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -304,10 +305,11 @@
     <Content Include="Views\Dua\Index.cshtml" />
     <Content Include="Views\Hadith\Index.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Donation\Index.cshtml" />
     <Content Include="Views\AdminDonation\Index.cshtml" />
     <Content Include="Views\AdminBlog\Index.cshtml" />
+    <Content Include="Views\USerPendingDonation\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

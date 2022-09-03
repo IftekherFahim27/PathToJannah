@@ -42,7 +42,7 @@ namespace PathToJannah.Controllers
 
             }
             ModelState.Clear();
-            ViewBag.SuccessMessage = "Donation  is Successful";
+            ViewBag.SuccessMessage = "Donation  is PENDING....";
             
             return View("Index", new Donation());
         }

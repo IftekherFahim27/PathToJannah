@@ -13,6 +13,8 @@ namespace PathToJannah.Controllers
         PTJEntities db = new PTJEntities();
         public ActionResult Index()
         {
+          
+
             List<Blog> blog = db.Blogs.ToList();
             return View(blog);
         }
