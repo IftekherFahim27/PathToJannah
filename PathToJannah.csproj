@@ -129,8 +129,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DBConnectionController.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DuaController.cs" />
     <Compile Include="Controllers\HadithController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -152,7 +155,7 @@
     <Compile Include="Models\Blog.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs">
+    <Compile Include="Models\Comments.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Donation.cs">
@@ -199,6 +202,7 @@
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StyleSheet2.css" />
     <Content Include="Content\StyleSheet3.css" />
+    <Content Include="Content\StyleSheet4.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\demo-files\demo.css" />
@@ -212,6 +216,7 @@
     <Content Include="images\1.png" />
     <Content Include="images\12.png" />
     <Content Include="images\Allah.png" />
+    <Content Include="images\aust_logo.jpeg" />
     <Content Include="images\back1.jpg" />
     <Content Include="images\back2.jpg" />
     <Content Include="images\back3.jpg" />
@@ -225,6 +230,8 @@
     <Content Include="images\hadith.jpg" />
     <Content Include="images\hadith.png" />
     <Content Include="images\img2.png" />
+    <Content Include="images\img_avatar1.png" />
+    <Content Include="images\img_avatar2.png" />
     <Content Include="images\Islam.jpg" />
     <Content Include="images\kalma-removebg-preview.png" />
     <Content Include="images\dua-thumbnail.png" />
@@ -294,6 +301,9 @@
     <Content Include="Views\Surah\Index.cshtml" />
     <Content Include="Views\Dua\Index.cshtml" />
     <Content Include="Views\Hadith\Index.cshtml" />
+    <Content Include="Views\AboutUs\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Donation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

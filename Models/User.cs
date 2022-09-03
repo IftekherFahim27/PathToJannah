@@ -16,14 +16,6 @@ namespace PathToJannah.Models
 
     public partial class User
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Blogs = new HashSet<Blog>();
-            this.Comments = new HashSet<Comment>();
-            this.Donations = new HashSet<Donation>();
-        }
-
         public int U_ID { get; set; }
 
         [Required(ErrorMessage = "Name is Required")]
@@ -53,15 +45,5 @@ namespace PathToJannah.Models
 
 
         public string LoginErrorMessage { get; set; }
-
-
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Blog> Blogs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Donation> Donations { get; set; }
     }
 }

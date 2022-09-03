@@ -11,15 +11,22 @@ namespace PathToJannah.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Donation
     {
         public int D_ID { get; set; }
+        [Required]
+        [DataType(DataType.Currency)]
         public string Amount { get; set; }
+        [Required]
+        [DisplayName("Transaction Id")]
         public string T_ID { get; set; }
+        [DataType(DataType.Date)]
+        [Required]
+        [DisplayName("Transaction Date")]
         public string t_time { get; set; }
-        public Nullable<int> U_ID { get; set; }
-    
-        public virtual User User { get; set; }
+        public int U_ID { get; set; }
     }
 }
