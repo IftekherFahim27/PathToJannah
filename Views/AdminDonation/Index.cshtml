@@ -25,51 +25,54 @@
         </ul>
     </div>
 
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Amount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.T_ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.t_time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.U_ID)
-            </th>
-            <th>
-            Action
-            </th>
-
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <table class="table table-light table-hover ">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Amount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.T_ID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.t_time)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.U_ID)
-                </td>
-                <td>
-                    @using (Html.BeginForm("Index", "AdminDonation", FormMethod.Post))
-                    {
-                        <button name="UpdateDonation" type="submit" value="UpdateDonation" class="btn btn-success">Approve</button>
-                    }
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.T_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.t_time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.U_ID)
+                </th>
+                <th>
+                    Action
+                </th>
 
-                </td>
             </tr>
-        }
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.T_ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.t_time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.U_ID)
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("Index", "AdminDonation", FormMethod.Post))
+                        {
+                            <button name="UpdateDonation" type="submit" value="UpdateDonation" class="btn btn-success">Approve</button>
+                        }
 
-    </table>
+                    </td>
+                </tr>
+            }
+                </tbody>
+
+</table>
     </body>
 </html>

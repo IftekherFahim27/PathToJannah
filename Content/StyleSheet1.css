@@ -7,8 +7,9 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    animation: slider 40s infinite linear;
+    animation: slider 60s infinite linear;
 }
+
 
 @keyframes slider {
     0% {
@@ -21,14 +22,17 @@ body {
 
     40% {
         background-image: url("../images/back3.jpg");
+        
     }
 
     60% {
         background-image: url("../images/back4.jpg");
+        
     }
 
     80% {
         background-image: url("../images/back5.jpg");
+        
     }
 }
 .active {
